@@ -1,6 +1,6 @@
 //import header
 import React from "react"
-
+import "../styles/page.module.css"
 
 // import { ApolloProvider,ApolloClient,InMemoryCache } from "@apollo/client";
 
