@@ -35,7 +35,6 @@ export default function Home() {
 const { loading, error, data } = useQuery (getPokemons, {
   variables: { first: 20, offset: 0 },
 });
-  console.log(data)
   return (
     <>
       <Header></Header>
