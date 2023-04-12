@@ -1,29 +1,45 @@
 import Head from "next/head";
-// import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql } from "@apollo/client";
 import Main from "./Home";
 import Header from "../components/Header/Header";
 import Footer from "./Footer";
-import React from "react"
+import React from "react";
 
-
-// const getPokemons = gql`
-//   query GetPokemons($first: Int!, $offset: Int!) {
-//     pokemons(first: $first, offset: $offset) {
-//       results {
-//         id
-//         name
-//         image
-//         types
-//       }
-//     }
-//   }
-// `;
 
 export default function Home() {
+  const getPokemons = gql`
+  query pokemons($first: Int!) {
+    pokemons(first: $first) {
+      id
+      number
+      name
+      weight {
+        minimum
+        maximum
+      }
+      height {
+        minimum
+        maximum
+      }
+      classification
+      types
+      resistant
+      weaknesses
+      fleeRate
+      maxCP
+      maxHP
+      image
+    }
+  }
+`;
+const { loading, error, data } = useQuery (getPokemons, {
+  variables: { first: 20, offset: 0 },
+});
+  console.log(data)
   return (
     <>
       <Header></Header>
-      <Main></Main>
+      <Main pokemons={data} loading={loading} error={error}></Main>
       <Footer></Footer>
     </>
   );
