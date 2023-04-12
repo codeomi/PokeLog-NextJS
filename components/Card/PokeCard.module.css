@@ -2,22 +2,31 @@
   width: 15vw;
   height: 35vh;
   background-color: aquamarine;
-  /* margin-top: 20vh; */
+  margin: 1vh;
   display: flex;
   flex-direction: column;
   border-radius: 1vh;
   box-shadow: 1vh;
   transition: all 0.5s ease-in-out;
+  
+}
+.linktag{
+text-decoration: none;
+color: rgba(15, 15, 15, 1);
 }
 
+
 .container:hover {
-  border: solid 0.5px rgba(0,0,0,1);
+  border: solid 0.1px rgba(0,0,0,1);
   transform: scale(1.05);
-  box-shadow: 1vh;
+  box-shadow: 0 0 10px rgba(15, 15, 15, 1);
+
+  transform: translateY(-1vmax);
 }
 
 .container:hover .name{
   color: tomato;
+  font-weight: 400 ;
 }
 
 .imageContainer {
@@ -35,11 +44,13 @@
 .description {
   display: flex;
   flex-direction: column;
+
 }
 
 .type {
   display: flex;
   flex-direction: row;
+
 }
 
 .serialNo {
@@ -47,6 +58,7 @@
   margin: 0.1vh;
   padding-left: 0.5vh;
   color: rgba(0, 0, 0, 0.8);
+
 }
 .name {
   font-size: 3vh;

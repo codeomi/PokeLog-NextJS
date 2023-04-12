@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
 }

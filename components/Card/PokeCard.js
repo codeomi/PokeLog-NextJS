@@ -1,10 +1,11 @@
 import React from "react";
 import Image from 'next/image'
 import styles from "./PokeCard.module.css";
+import Link from "next/link";
 
 function PokeCard({title,serialNo,img,type}) {
   return (
-    <>
+    <><Link className={styles.linktag} href={"/pokemon"}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
         <Image className={styles.pokeImage}
@@ -20,6 +21,7 @@ function PokeCard({title,serialNo,img,type}) {
           </div>
         </div>
       </div>
+      </Link>
     </>
   );
 }
