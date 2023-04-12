@@ -1,0 +1,68 @@
+.container {
+  width: 15vw;
+  height: 35vh;
+  background-color: aquamarine;
+  /* margin-top: 20vh; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vh;
+  box-shadow: 1vh;
+  transition: all 0.5s ease-in-out;
+}
+
+.container:hover {
+  border: solid 0.5px rgba(0,0,0,1);
+  transform: scale(1.05);
+  box-shadow: 1vh;
+}
+
+.container:hover .name{
+  color: tomato;
+}
+
+.imageContainer {
+  width: 15vw;
+  height: 26vh;
+  background-color: bisque;
+}
+
+.imageContainer:first-child {
+  width: 14vw;
+  height: 25vh;
+  background-color: chocolate;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.type {
+  display: flex;
+  flex-direction: row;
+}
+
+.serialNo {
+  font-size: 2vh;
+  margin: 0.1vh;
+  padding-left: 0.5vh;
+  color: rgba(0, 0, 0, 0.8);
+}
+.name {
+  font-size: 3vh;
+  font-weight: 300;
+  margin-left: 0.6vh;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.type > div {
+  width: fit-content;
+  padding: 0 0.8vw 0 0.8vw;
+  font-size: 2vh;
+  font-weight: 500;
+  margin-left: 1vw;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 1vh;
+}

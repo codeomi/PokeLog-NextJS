@@ -1,7 +1,7 @@
 import Head from "next/head";
 // import { useQuery, gql } from "@apollo/client";
 import Main from "./Home";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Footer from "./Footer";
 import React from "react"
 
