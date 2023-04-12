@@ -1,0 +1,153 @@
+.container {
+  margin: 10vh;
+}
+.title {
+  text-align: center;
+}
+.pokemonName {
+  font-size: 10vh;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pokemonSerial {
+  font-size: 5vh;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+  margin-top: 5vh;
+  max-width: 90vmax;
+}
+
+.container11 {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.imageContainer {
+  width: 40vw;
+  height: 20vmax;
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+.container2 {
+  padding: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.pokemonDescription {
+  font-size: 3vh;
+  color: rgba(0, 0, 0, 0.75);
+  padding-bottom: 1vw;
+}
+
+.container12 {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2vh;
+  padding: 0.5vh;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container12 > div {
+  margin: 1vh;
+}
+
+.heightContainer {
+  font-size: 4vh;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.heightInput {
+  font-size: 3vh;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.categoryContainer {
+  font-size: 4vh;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.categoryInput {
+  font-size: 3vh;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.weightContainer {
+  font-size: 4vh;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.weightInput {
+  font-size: 3vh;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.abilityContainer {
+  font-size: 4vh;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.abilityInput {
+  font-size: 3vh;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.container22{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.pokeType{
+   font-size: 3vh;
+   margin-top: 1vh;
+}
+.types{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.types>div{
+    text-align: center;
+    width: 5vw;
+    border-radius: 1vw;
+    background-color: cornflowerblue;
+    margin-top: 0.7vh;
+    margin-right: 2vh;
+}
+
+.container223{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.pokeWeakness{
+    font-size: 3vh;
+    margin-top: 1vh;
+}
+
+.weaknesses{
+    display: flex;
+    flex-direction: row;
+}
+.weaknesses>div{
+    text-align: center;
+    width: 5vw;
+    border-radius: 1vw;
+    background-color: cornflowerblue;
+    margin-top: 0.7vh;
+    margin-right: 2vh;
+}
