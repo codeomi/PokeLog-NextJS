@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Loader from "../components/Loader/Loader";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
+import Evolutions from "../components/Evolutions/PokemonEvolutions";
 
 function Pokemon() {
   const router = useRouter();
@@ -43,14 +44,12 @@ function Pokemon() {
   const { loading, error, data } = useQuery(pokemonDetails, {
     variables: { id: keyword.id },
   });
-  console.log(data);
   useEffect(() => {
     if (data) {
       setPokemonData(data.pokemon);
     }
   }, [data, pokemonData]);
 
-  console.log(pokemonData);
 
   return (
     <>
@@ -123,6 +122,7 @@ function Pokemon() {
                 </div>
               </div>
             </div>
+            <Evolutions id={keyword.id} name={pokemonData.name}/>
           </div>
         )}
       </div>
