@@ -6,6 +6,14 @@
     align-items: center;
 }
 
+.titleContainer{
+    text-align: center;
+}
+    .title{
+        font-size: 8vh;
+    }
+    
+
 .pokeCards {
     display: flex;
     /* flex-direction: row; */
@@ -13,3 +21,27 @@
     margin: 2vmax auto;
     justify-content: center;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        margin: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.titleContainer{
+    text-align: center;
+}
+    .title{
+        font-size: 6vh;
+    }
+    
+    .pokeCards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2vmax auto;
+        justify-content: center;
+    }
+  }

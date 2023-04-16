@@ -100,8 +100,8 @@ export default function Main({ initialData }) {
   return (
     <>
       <div className={styles.container}>
-        <div className="title">
-          <h1 className="title">Pokelog</h1>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>Pokelog</h1>
         </div>
         <div className={styles.pokeCards}>
           {data?.pokemons.map((poke) => (

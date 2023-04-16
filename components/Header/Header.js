@@ -13,7 +13,7 @@ export default function Header() {
     <>
       <div className={styles.navbar}>
         <div className={styles.logo}>
-          <h3>PockeLog</h3>
+          <h3>PokeLog</h3>
         </div>
         <div className={styles.details}>
         <Link href='/' className={currentRoute === '/' ? styles.active : styles.nonActive}>
