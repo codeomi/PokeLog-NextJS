@@ -135,7 +135,6 @@
 .types {
   display: flex;
   flex-direction: row;
-
 }
 
 .types > div {
@@ -173,8 +172,204 @@
   margin-right: 2vh;
 }
 
-.grass{
+.grass {
   width: 5vw;
-background-color: rgba(168, 234, 166, 0.8);
+  background-color: rgba(168, 234, 166, 0.8);
+}
 
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-bottom: 3vh;
+  }
+  .title {
+    text-align: center;
+    font-size: 5vw;
+  }
+  .pokemonName {
+    font-size: 10vw;
+    color: rgba(0, 0, 0, 0.85);
+  }
+  .pokemonSerial {
+    font-size: 8vw;
+    color: rgba(0, 0, 0, 0.6);
+    font-style: italic;
+  }
+
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    width: 100%;
+  }
+
+  .imageContainer {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+  }
+
+  .pokeImage {
+    width: 70vw;
+    height: 40vh;
+    padding-left: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container2 {
+    /* padding: 1.5vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pokemonDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-right: 2vh; */
+    font-size: 7vw;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+    /* padding-bottom: 1vw; */
+    margin-bottom: 2vw;
+  }
+
+  .classification {
+    font-size: 8vw;
+  }
+
+  .Pokeclassification {
+    font-weight: 600;
+  }
+
+  .container12 {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2vh;
+    /* padding: 0.5vh; */
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2vw;
+  }
+  /*   
+  .container12 > div {
+    margin: 1vh;
+  } */
+
+  .heightContainer {
+    font-size: 4vh;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  .heightInput {
+    font-size: 3vh;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .categoryContainer {
+    font-size: 4vh;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  .categoryInput {
+    font-size: 3vh;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .weightContainer {
+    font-size: 4vh;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  .weightInput {
+    font-size: 3vh;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .abilityContainer {
+    font-size: 4vh;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  .abilityInput {
+    font-size: 3vh;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .container22 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pokeType {
+    font-size: 8vw;
+    margin-top: 1vh;
+    margin-top: 3vh;
+  }
+  .types {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .types > div {
+    text-align: center;
+    width: fit-content;
+    font-size: 6vw;
+    padding: 2vw;
+    border-radius: 3vw;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* background-color: cornflowerblue; */
+  }
+
+  .container223 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pokeWeakness {
+    font-size: 8vw;
+    margin-top: 1vh;
+    margin-top: 3vh;
+  }
+
+  .weaknesses {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .weaknesses > div {
+    text-align: center;
+    width: fit-content;
+    font-size: 6vw;
+    padding: 2vw;
+    border-radius: 3vw;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .grass {
+    width: 5vw;
+    background-color: rgba(168, 234, 166, 0.8);
+  }
 }

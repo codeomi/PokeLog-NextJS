@@ -71,7 +71,7 @@ function Pokemon() {
                     <Image
                       className={styles.pokeImage}
                       height={250}
-                      width={450}
+                      width={250}
                       src={pokemonData.image}
                       alt={pokemonData.name}
                     />
@@ -80,7 +80,7 @@ function Pokemon() {
               </div>
               <div className={styles.container2}>
                 <div className={styles.pokemonDescription}>
-                  <div className="classification">Classification:</div>
+                  <div className={styles.classification}>Classification:</div>
                   <div className={styles.Pokeclassification}>
                     {pokemonData.classification}
                   </div>
