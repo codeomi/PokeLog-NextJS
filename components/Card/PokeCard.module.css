@@ -77,3 +77,73 @@
   border: none;
   border-radius: 1vh;
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 60vw;
+    height: 40vh;
+    margin: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+  }
+  .linktag {
+    text-decoration: none;
+    color: rgba(15, 15, 15, 1);
+  }
+
+  .imageContainer {
+    /* padding: ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageContainer:first-child {
+    width: 25vw;
+    height: 25vh;
+
+    /* background-color: chocolate; */
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+
+  .type {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .serialNo {
+    margin: 0.1vh;
+    /* padding-left: 0.5vh; */
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 6vw;
+  }
+  .name {
+    font-size: 3.5vh;
+    font-weight: 300;
+    margin: 1vw;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .type > div {
+    width: fit-content;
+    text-align: center;
+    padding-left: 1.2vh;
+    padding-right: 1.2vh;
+    font-size: 2vh;
+    font-weight: 500;
+    margin-left: 1vw;
+    background-color: rgba(144, 179, 231, 0.425);
+    border: none;
+    border-radius: 1vh;
+  }
+}

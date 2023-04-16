@@ -11,7 +11,7 @@ function PokeCard({poke}) {
       <Link className={styles.linktag} href={{pathname:"/pokemon", query:{id:id}}}>
         <div className={styles.container}>
           <div className={styles.imageContainer}>
-            <Image height={180} width={165} className={styles.pokeImage} src={image}  alt="Landscape picture"></Image>
+            <Image height={180} width={180} className={styles.pokeImage} src={image}  alt="Landscape picture"></Image>
           </div>
           <div className={styles.description}>
             <div className={styles.serialNo}>{number}</div>
