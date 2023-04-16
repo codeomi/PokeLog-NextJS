@@ -27,12 +27,7 @@ export default function Header() {
         About
       </Link>
 
-      <Link
-        href='/contact'
-        className={currentRoute === '/contact' ? styles.active : styles.nonActive}
-      >
-        Contact
-      </Link>
+    
         </div>
       </div>
     </>

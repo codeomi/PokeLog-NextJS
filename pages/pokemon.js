@@ -50,6 +50,9 @@ function Pokemon() {
     }
   }, [data, pokemonData]);
 
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>
@@ -122,7 +125,11 @@ function Pokemon() {
                 </div>
               </div>
             </div>
-            <Evolutions id={keyword.id} name={pokemonData.name}/>
+            <Evolutions
+              serialNo={pokemonData.number}
+              id={keyword.id}
+              name={pokemonData.name}
+            />
           </div>
         )}
       </div>

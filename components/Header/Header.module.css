@@ -49,3 +49,64 @@
     color: rgba(0, 0, 0, 1);
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1vw;
+    cursor: pointer;
+  }
+  
+  .details > a {
+    width: 25vw;
+    height: 100%;
+    margin: 1vw;
+    padding: 0.1vw 0.8vw 0 0.8vw;
+    font-size: 6vw;
+    font-weight: 500;
+    transition: all 0.4s;
+    color: rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+    border-radius: 0.8vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+  }
+  
+  .details > a:hover {
+    font-size: 1.9vw;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .logo:first-child {
+    width: 14vw;
+    margin-left: 1vw;
+    font-size: 5vw;
+  }
+  
+  .active{
+      margin: 0;
+      font-size: 1.9vw;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 1);
+      background-color: rgba(0, 0, 0, 0.5);
+  }
+}
