@@ -4,8 +4,8 @@ import PokeCard from "../components/Card/PokeCard";
 import styles from "../styles/pages css/Home.module.css";
 import { Pagination } from "@mui/material";
 import Loader from "../components/Loader/Loader";
-import { useQuery, gql,initializeApollo } from "@apollo/client";
-import {isBrowser, isMobile } from "react-device-detect";
+import { useQuery, gql, initializeApollo } from "@apollo/client";
+import { isBrowser, isMobile } from "react-device-detect";
 import MobileLoader from "../components/MobileLoader/MobileLoader";
 
 const getPokemons = gql`
@@ -37,25 +37,66 @@ const getPokemons = gql`
 const POKEMON_PER_PAGE = 20;
 const NUM_PAGES = 3;
 
-export default function Main({ initialData }) {
+export default function Main() {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const { loading, data, error, refetch, networkStatus } = useQuery(
-    getPokemons,
-    {
-      variables: {
-        first: POKEMON_PER_PAGE,
-        offset: (currentPage - 1) * POKEMON_PER_PAGE,
-      },
-      skip: !!initialData,
-      initialData,
-      notifyOnNetworkStatusChange: true,
-    }
-  );
+  // const { loading, data, error, refetch, networkStatus } = useQuery(
+  //   getPokemons,
+  //   {
+  //     variables: {
+  //       first: POKEMON_PER_PAGE,
+  //       offset: (currentPage - 1) * POKEMON_PER_PAGE,
+  //     },
+  //     skip: !!initialData,
+  //     initialData,
+  //     notifyOnNetworkStatusChange: true,
+  //   }
+  // );
 
-  console.log(data);
+
 
   // const pokemons = data.pokemons.results
+
+
+
+
+  const getPokemons = gql`
+    query pokemons($first: Int!) {
+      pokemons(first: $first) {
+        id
+        number
+        name
+        weight {
+          minimum
+          maximum
+        }
+        height {
+          minimum
+          maximum
+        }
+        classification
+        types
+        resistant
+        weaknesses
+        fleeRate
+        maxCP
+        maxHP
+        image
+      }
+    }
+  `;
+  const { loading, error, data ,networkStatus,refetch} = useQuery(getPokemons, {
+    variables: { first: 20, offset: 0 },
+  });
+  console.log(data);
+
+
+  if (loading) {
+    return <Loader />;
+  }
+  if (loading && isMobile) {
+    return <MobileLoader />;
+  }
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
@@ -66,43 +107,6 @@ export default function Main({ initialData }) {
       });
     }
   };
-
-  if(loading ){
-    return <Loader/>
-  }
-  if(loading && isMobile){
-    return <MobileLoader/>
-  }
-
-  // const getPokemons = gql`
-  //   query pokemons($first: Int!) {
-  //     pokemons(first: $first) {
-  //       id
-  //       number
-  //       name
-  //       weight {
-  //         minimum
-  //         maximum
-  //       }
-  //       height {
-  //         minimum
-  //         maximum
-  //       }
-  //       classification
-  //       types
-  //       resistant
-  //       weaknesses
-  //       fleeRate
-  //       maxCP
-  //       maxHP
-  //       image
-  //     }
-  //   }
-  // `;
-  // const { loading, error, data } = useQuery(getPokemons, {
-  //   variables: { first: 20, offset: 0 },
-  // });
-  // console.log(data);
 
   return (
     <>
@@ -134,29 +138,29 @@ export default function Main({ initialData }) {
   );
 }
 
-export async function getStaticProps() {
-  // const limit = POKEMON_PER_PAGE;
-  // let offset = 0;
-  const apolloClient = initializeApollo();
+// export async function getStaticProps() {
+//   // const limit = POKEMON_PER_PAGE;
+//   // let offset = 0;
+//   const apolloClient = initializeApollo();
 
-  const pages = Array.from({ length: NUM_PAGES }).map((_, i) => i + 1);
+//   const pages = Array.from({ length: NUM_PAGES }).map((_, i) => i + 1);
 
-  const initialData = await Promise.all(
-    pages.map((page) =>
-      apolloClient.query({
-        query: getPokemons,
-        variables: {
-          first: POKEMON_PER_PAGE,
-          offset: (page - 1) * POKEMON_PER_PAGE,
-        },
-      })
-    )
-  );
+//   const initialData = await Promise.all(
+//     pages.map((page) =>
+//       apolloClient.query({
+//         query: getPokemons,
+//         variables: {
+//           first: POKEMON_PER_PAGE,
+//           offset: (page - 1) * POKEMON_PER_PAGE,
+//         },
+//       })
+//     )
+//   );
 
-  return {
-    props: {
-      initialData: initialData.map((result) => result.data),
-    },
-    revalidate: 1,
-  };
-}
+//   return {
+//     props: {
+//       initialData: initialData.map((result) => result.data),
+//     },
+//     revalidate: 1,
+//   };
+// }
