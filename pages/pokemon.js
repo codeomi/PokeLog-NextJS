@@ -8,6 +8,8 @@ import Image from "next/image";
 import Loader from "../components/Loader/Loader";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import Evolutions from "../components/Evolutions/PokemonEvolutions";
+import MobileLoader from "../components/MobileLoader/MobileLoader";
+import { isBrowser, isMobile } from "react-device-detect";
 
 function Pokemon() {
   const router = useRouter();
@@ -50,19 +52,23 @@ function Pokemon() {
     }
   }, [data, pokemonData]);
 
-  if (loading) {
-    return <Loader />;
+  if(loading && isBrowser){
+    return <Loader/>
+  }
+  if(loading && isMobile){
+    return <MobileLoader/>
   }
 
   return (
     <>
+    <MobileLoader/>
       <Header />
       <div className={styles.container}>
         {pokemonData && (
           <div>
             <div className={styles.title}>
               <div className={styles.pokemonName}>{pokemonData.name}</div>
-              <div className={styles.pokemonSerial}>{pokemonData.number}</div>
+              <div className={styles.pokemonSerial}>#{pokemonData.number}</div>
             </div>
             <div className={styles.container1}>
               <div className={styles.container11}>

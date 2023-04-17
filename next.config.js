@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   experimental: {
-    appDir: true,
+    appDir: false,
   },
   future: { webpack5: true },
   images: {

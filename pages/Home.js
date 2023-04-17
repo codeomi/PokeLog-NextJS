@@ -5,6 +5,8 @@ import styles from "../styles/pages css/Home.module.css";
 import { Pagination } from "@mui/material";
 import Loader from "../components/Loader/Loader";
 import { useQuery, gql } from "@apollo/client";
+import {isBrowser, isMobile } from "react-device-detect";
+import MobileLoader from "../components/MobileLoader/MobileLoader";
 
 const getPokemons = gql`
   query pokemons($first: Int!) {
@@ -65,7 +67,12 @@ export default function Main({ initialData }) {
     }
   };
 
-  console.log(networkStatus);
+  if(loading ){
+    return <Loader/>
+  }
+  if(loading && isMobile){
+    return <MobileLoader/>
+  }
 
   // const getPokemons = gql`
   //   query pokemons($first: Int!) {
