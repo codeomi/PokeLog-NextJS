@@ -4,7 +4,7 @@ import PokeCard from "../components/Card/PokeCard";
 import styles from "../styles/pages css/Home.module.css";
 import { Pagination } from "@mui/material";
 import Loader from "../components/Loader/Loader";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql,initializeApollo } from "@apollo/client";
 import {isBrowser, isMobile } from "react-device-detect";
 import MobileLoader from "../components/MobileLoader/MobileLoader";
 
